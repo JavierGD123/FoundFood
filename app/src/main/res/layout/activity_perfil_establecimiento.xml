@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF2B2B2B"
+    tools:context=".perfilestablecimiento">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="149dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logofofocabecera" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="#212F3D">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLogoEstaPerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:srcCompat="@drawable/vistaprevia" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button13"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/ic_menu_camera"
+                            android:onClick="TOMARFOTOLOGO" />
+
+                        <TextView
+                            android:id="@+id/textView29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cambiar logotipo" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtNombre"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/archivo_black"
+                    android:gravity="center"
+                    android:text="Tú Perfil"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/txtNombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz1234567890 "
+                            android:ems="10"
+                            android:hint="Nombre del establecimiento"
+                            android:inputType="textPersonName"
+                            android:maxLength="40"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/txtUsuario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz-1234567890@"
+                            android:ems="10"
+                            android:hint="Nombre de usuario"
+                            android:inputType="textPersonName"
+                            android:maxLength="40"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:passwordToggleEnabled="true">
+
+                        <EditText
+                            android:id="@+id/txtContrasena"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz-1234567890@ "
+                            android:ems="10"
+                            android:hint="Contraseña"
+                            android:inputType="textPassword"
+                            android:maxLength="20"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:digits="abcdefghijklmnopqrstuvwxyz@.-_1234567890"
+                                android:ems="10"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="40"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RadioButton
+                            android:id="@+id/rbtCambiarCorreoEsta"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:onClick="CambiarEmail"
+                            android:text="Cambiar" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtEmailNombreEsta"
+                                android:layout_width="131dp"
+                                android:layout_height="wrap_content"
+                                android:digits="abcdefghijklmnopqrstuvwxyz.-_1234567890"
+                                android:hint="Nuevo email"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="38"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Spinner
+                            android:id="@+id/OpcionesCorreosPerfilEsta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <EditText
+                            android:id="@+id/txtTelefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Número de teléfono"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/boton2"
+                    android:gravity="center"
+                    android:onClick="ACTUALIZAR"
+                    android:text="  Actualizar datos  " />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btnAcercadelpaquete"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/acercademipaquete"
+                                android:onClick="MIPAQUETE" />
+
+                            <TextView
+                                android:id="@+id/paquetes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Acerca de mi paquete" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_focused"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtNombre"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/archivo_black"
+                    android:gravity="center"
+                    android:text="Menú"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/rdbComida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicComida"
+                            android:text="Comida" />
+
+                        <RadioButton
+                            android:id="@+id/rdbBebida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicBebida"
+                            android:text="Bebida" />
+
+                        <RadioButton
+                            android:id="@+id/rdbPostre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicPostre"
+                            android:text="Postre" />
+
+                        <RadioButton
+                            android:id="@+id/rdbBotana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicBotana"
+                            android:text="Botana" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtNombreProducto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz "
+                                android:ems="10"
+                                android:enabled="false"
+                                android:hint="Nombre del producto"
+                                android:inputType="textPersonName"
+                                android:maxLength="34"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtCostoProducto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:enabled="false"
+                                android:hint="Costo"
+                                android:inputType="numberDecimal"
+                                android:maxLength="4"
+                                android:singleLine="true" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="329dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnTomarFoto"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/ic_menu_camera"
+                        android:onClick="TOMARFOTOPRODUCTO" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Agregar foto del producto"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgFoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="139dp"
+                        app:srcCompat="@drawable/vistaprevia" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VISTA PREVIA" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAgregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/boton2"
+                    android:gravity="center"
+                    android:onClick="AGREGAR_PRODUCTO"
+                    android:text="  Agregar producto " />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:background="@drawable/misproductos"
+                                android:onClick="MisProductos" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Mis productos" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/common_google_signin_btn_text_light_focused"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtNombre"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/archivo_black"
+                    android:gravity="center"
+                    android:text="Estatus"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView399"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Disponibilidad de servicio" />
+
+                    <RadioGroup
+                        android:layout_width="294dp"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rdbAbierto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicAbierto"
+                            android:text="Abierto" />
+
+                        <RadioButton
+                            android:id="@+id/rdbCerrado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicCerrado"
+                            android:text="Cerrado" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtTuHorario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Horario:" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="De:"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/txtHorade"
+                                android:layout_width="33dp"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/txtPmde"
+                                android:layout_width="33dp"
+                                android:layout_height="wrap_content"
+                                android:text="am"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioGroup
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <RadioButton
+                                        android:id="@+id/rdbamde"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="OnclicAmDe"
+                                        android:text="am" />
+
+                                    <RadioButton
+                                        android:id="@+id/rdbpmde"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="OnclicPmDe"
+                                        android:text="pm" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btnIncrementarDe"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/incrementar"
+                                    android:onClick="IncrementarHoraDe"
+                                    android:text="+" />
+
+                                <Space
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content" />
+
+                                <Button
+                                    android:id="@+id/btnDecrementarDe"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/decrementar"
+                                    android:onClick="DecrementarHoraDe"
+                                    android:text="-" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="a"
+                            android:textAlignment="center"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Space
+                                android:layout_width="25dp"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/txtHoraHasta"
+                                android:layout_width="33dp"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/txtpmHasta"
+                                android:layout_width="33dp"
+                                android:layout_height="wrap_content"
+                                android:text="am"
+                                android:textAlignment="center"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RadioGroup
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RadioButton
+                                        android:id="@+id/rdbamhasta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="OnclicAmHasta"
+                                        android:text="am" />
+
+                                    <RadioButton
+                                        android:id="@+id/rdbpmhasta"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="OnclicPmHasta"
+                                        android:text="pm" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <Button
+                                    android:id="@+id/btnIncrementarHasta"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/incrementar"
+                                    android:onClick="IncrementarHoraHasta"
+                                    android:text="+" />
+
+                                <Space
+                                    android:layout_width="30dp"
+                                    android:layout_height="wrap_content" />
+
+                                <Button
+                                    android:id="@+id/btnDecrementarHasta"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:background="@drawable/decrementar"
+                                    android:onClick="DecrementarHoraHasta"
+                                    android:text="-" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Disponibilidad de asientos" />
+
+                    <RadioGroup
+                        android:layout_width="294dp"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rdbLleno"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicEstatus"
+                            android:text="Lleno" />
+
+                        <RadioButton
+                            android:id="@+id/rdbMesasDisponibles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="OnclicLugaresDisponibles"
+                            android:text="Mesas disponibles" />
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <EditText
+                                android:id="@+id/txtMesasDisponibles"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:hint="Número de mesas"
+                                android:inputType="number"
+                                android:maxLength="3" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/boton2"
+                    android:onClick="ActualizarEstatus"
+                    android:text="  Actualizar Estatus  " />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/common_google_signin_btn_text_light_focused"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/txtNombre"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/archivo_black"
+                    android:gravity="center"
+                    android:text="Promociones"
+                    android:textSize="30sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/txtCostoProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre de la promoción"
+                        android:inputType="textPersonName"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnTomarFotoPromo"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/ic_menu_camera"
+                        android:onClick="TOMARFOTOPROMOCION" />
+
+                    <TextView
+                        android:id="@+id/textView66"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Agregar foto de la promoción"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView36"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dia de promoción" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/rdbLunes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Lunes" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbMartes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Martes" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbMiercoles"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Miércoles" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbJueves"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jueves" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbViernes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Viernes" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbSabado"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sábado" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbDomingo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Domingo" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imgFotoPromo"
+                                android:layout_width="match_parent"
+                                android:layout_height="139dp"
+                                app:srcCompat="@drawable/vistaprevia" />
+
+                            <TextView
+                                android:id="@+id/textView100"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="VISTA PREVIA" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/boton2"
+                    android:onClick="AGREGAR_PROMOCION"
+                    android:text="  Agregar promoción  " />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnMisPromociones"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:background="@drawable/promociones1"
+                            android:onClick="MisPromociones" />
+
+                        <TextView
+                            android:id="@+id/textView144"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mis promociones" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/BtnCerrarSesionEsta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boton3"
+                        android:onClick="CERRAR_SESION"
+                        android:text="  Cerrar sesión  " />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

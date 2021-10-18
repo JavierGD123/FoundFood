@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".misproductos">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="149dp"
+            android:layout_height="50dp"
+            android:background="@drawable/logofofocabecera" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:background="#212F3D">
+
+        <LinearLayout
+            android:id="@+id/Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txtNombre"
+                android:fontFamily="@font/archivo_black"
+                android:gravity="center"
+                android:text="Mis Productos"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_default"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView12"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/comida2" />
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/comida" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txtNombre"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center"
+                        android:text="Comidas"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/txtNombreProductoComida"
+                            android:layout_width="188dp"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:hint="Nombre de la comida"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnBuscarComida"
+                            android:layout_width="27dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/buscar"
+                            android:onClick="BuscarProductoComida" />
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buscar"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNombreComida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre: " />
+
+                    <TextView
+                        android:id="@+id/txtCostoComida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costo: " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgComida"
+                            android:layout_width="match_parent"
+                            android:layout_height="139dp"
+                            app:srcCompat="@drawable/vistaprevia" />
+
+                        <TextView
+                            android:id="@+id/texVitapreviaComida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vista Previa" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtActalizarProductoComida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="ActualizarComida"
+                                    android:text="Actualizar" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="193dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/button5"
+                                    android:layout_width="27dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/eliminar"
+                                    android:onClick="EliminarComida" />
+
+                                <TextView
+                                    android:id="@+id/txtEliminarProductoComida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eliminar" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_default"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/bebida2" />
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/bebida3" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txtNombre"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center"
+                        android:text="Bebidas"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/txtNombreProductoBebida"
+                            android:layout_width="188dp"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:hint="Nombre de la bebida"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnBuscarBebida"
+                            android:layout_width="27dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/buscar"
+                            android:onClick="BuscarProductoBebida" />
+
+                        <TextView
+                            android:id="@+id/Buscartxtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buscar"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNombreBebida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre: " />
+
+                    <TextView
+                        android:id="@+id/txtCostoBebida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costo: " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgBebida"
+                            android:layout_width="match_parent"
+                            android:layout_height="139dp"
+                            app:srcCompat="@drawable/vistaprevia" />
+
+                        <TextView
+                            android:id="@+id/VistapreviaBebida"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vista Previa" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtActalizarProductoBebida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="ActualizarBebida"
+                                    android:text="Actualizar" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="193dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/button6"
+                                    android:layout_width="27dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/eliminar"
+                                    android:onClick="EliminarBebida" />
+
+                                <TextView
+                                    android:id="@+id/txtEliminarProductoBebida"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eliminar" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_default"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/postre2" />
+
+                        <ImageView
+                            android:id="@+id/imageView9"
+                            android:layout_width="61dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/postre" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/texpost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txtNombre"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center"
+                        android:text="Postres"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/txtNombreProductoPostre"
+                            android:layout_width="188dp"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:hint="Nombre del postre"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnBuscarPostre"
+                            android:layout_width="27dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/buscar"
+                            android:onClick="BuscarProductoPostre" />
+
+                        <TextView
+                            android:id="@+id/textView35"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buscar"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNombrePostre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre: " />
+
+                    <TextView
+                        android:id="@+id/txtCostoPostre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costo: " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgPostre"
+                            android:layout_width="match_parent"
+                            android:layout_height="139dp"
+                            app:srcCompat="@drawable/vistaprevia" />
+
+                        <TextView
+                            android:id="@+id/vistapreviaPostre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vista Previa" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtActalizarProductoPostre"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="ActualizarPostre"
+                                    android:text="Actualizar" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="193dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/button11"
+                                    android:layout_width="27dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/eliminar"
+                                    android:onClick="EliminarPostre" />
+
+                                <TextView
+                                    android:id="@+id/txtEliminarProductoPostre"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eliminar" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="329dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@color/common_google_signin_btn_text_light_default"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="61dp"
+                        android:layout_height="48dp"
+                        app:srcCompat="@drawable/botana" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/txtNombre"
+                        android:fontFamily="@font/archivo_black"
+                        android:gravity="center"
+                        android:text="Botanas"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/txtNombreProductoBotana"
+                            android:layout_width="188dp"
+                            android:layout_height="wrap_content"
+                            android:completionThreshold="1"
+                            android:hint="Nombre de la botana"
+                            android:singleLine="true" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btnBuscarBotana"
+                            android:layout_width="27dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/buscar"
+                            android:onClick="BuscarProductoBotana" />
+
+                        <TextView
+                            android:id="@+id/textView32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buscar"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNombreBotana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre: " />
+
+                    <TextView
+                        android:id="@+id/txtCostoBotana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costo: " />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgBotana"
+                            android:layout_width="match_parent"
+                            android:layout_height="139dp"
+                            app:srcCompat="@drawable/vistaprevia" />
+
+                        <TextView
+                            android:id="@+id/vistapreviabotana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vista Previa" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txtActalizarProductoBotana"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="ActualizarBotana"
+                                    android:text="Actualizar" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="193dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <Button
+                                    android:id="@+id/button12"
+                                    android:layout_width="27dp"
+                                    android:layout_height="28dp"
+                                    android:background="@drawable/eliminar"
+                                    android:onClick="EliminarBotana" />
+
+                                <TextView
+                                    android:id="@+id/txtEliminarProductoBotana"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Eliminar" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@drawable/boton3"
+                        android:onClick="Regresar"
+                        android:text="Regresar" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
